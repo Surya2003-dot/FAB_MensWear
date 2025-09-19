@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAB_MEN'S-WEAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- -font aswome-  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="icon" href="imge/logo-white.png">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Brand -->
+    <a class="brand me-3 text-success fw-bold" href="#">FAB</a>
+
+    <!-- Right icons -->
+    <div class="navbar-icons order-lg-2">
+      <a class="icon-link text-decoration-none" href="wishlist.html">
+        <i class="fa-regular fa-heart"></i>
+        <span id="heartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+
+      <a class="icon-link text-decoration-none " href="bag.html">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="bagCount" class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <form class="d-flex navbar-search align-items-center justify-content-center" role="search">
+        <input class="form-control m-2" type="search" placeholder="Search Products" />
+        <button class="btn btn-outline-dark m-2" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+
+      <!-- Nav Links -->
+      <a class="nav-link px-3  text-center active" href="index.html">Home</a>
+      <a class="nav-link px-3 text-center" href="#shop">Shop</a>
+      <a class="nav-link px-3 text-center" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
+      <a class="nav-link px-3 text-center" data-bs-toggle="modal" data-bs-target="#registerModal" href="#">Register</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6" id="content">
+                <h5>Men's Hot Collections</h5>
+                <h2>Fashion Trending</h2>
+                <h1 class="text-success">Great Collections</h1>
+                <p>Save more with coupons & up to 15% off</p>
+                <button class="btn btn-success"><a href="#shop" class="text-light">Shop Now</a></button>  
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <img src="imge/banner-logo.png" alt="" class="img-fluid" style="max-height:500px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Products -->
+<section class="popular my-5" id="shop">
+    <h3> <span class="text-success">Popular </span>Collections</h3>
+    <div class="container">
+        <div class="row g-4 justify-content-center d-flex align-items-stretch">
+
+            <!-- Product Cards  -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+             <a href="details.html?name=Pure+Cotton+Shirt&price=500&image=imge/frml1.jpeg&category=shirt" class="text-decoration-none text-dark">
+  <div class="card shadow-sm product-card">
+    <div class="position-relative">
+      <img src="imge/frml1.jpeg" alt="Shirt 1">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Pure Cotton Shirt</h5>
+
+      <span class="heart-icon">
+        <i class="fa-regular fa-heart"
+           data-id="frml1"
+           data-name="Pure Cotton Shirt"
+           data-price="500"
+           data-img="imge/frml1.jpeg"></i>
+      </span>
+
+      <p class="star-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+      </p>
+
+      <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+    </div>
+    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+  </div>
+</a>
+
+            </div>
+
+            
+            <!-- Product 2 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                          <a href="details.html?name=Formal+Shirt&price=650&image=imge/frml2.jpeg&category=shirt" class="text-decoration-none text-dark">
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml2.jpeg" alt="Shirt 2">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+      data-id="frml2" 
+       data-name="Formal Shirt" 
+       data-price="650" 
+       data-img="imge/frml2.jpeg"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Formal Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                        <p><strong class="text-success">₹650</strong> <del>₹900</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                 <a href="details.html?name=Casual+Shirt&price=550&image=imge/frml3.jpeg&category=shirt" class="text-decoration-none text-dark">
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml3.jpeg" alt="Shirt 3">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+                          data-id="frml3" 
+       data-name="Casoul Shirt" 
+       data-price="550" 
+       data-img="imge/frml3.jpeg"  ></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Casual Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p><strong class="text-success">₹550</strong> <del>₹750</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                 <a href="details.html?name=Linen+Shirt&price=700&image=imge/frml4.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml4.jpeg" alt="Shirt 4">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+                            data-id="frml4" 
+       data-name="Linen Shirt" 
+       data-price="700" 
+       data-img="imge/frml4.jpeg"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Linen Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                        <p><strong class="text-success">₹700</strong> <del>₹950</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                 </a>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                 <a href="details.html?name=Denim+Shirt&price=800&image=imge/frml5.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml5.jpeg" alt="Shirt 5">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+             data-id="frml5" 
+       data-name="Denim Shirt" 
+       data-price="800" 
+       data-img="imge/frml5.jpeg" ></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Denim Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p><strong class="text-success">₹800</strong> <del>₹1000</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                 </a>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                 <a href="details.html?name=Checked+Shirt&price=600&image=imge/casl1.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/casl1.jpeg" alt="Shirt 6">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+                               data-id="casl1" 
+       data-name="Checked Shirt" 
+       data-price="600" 
+       data-img="imge/casl1.jpeg"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Checked Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                        <p><strong class="text-success">₹600</strong> <del>₹800</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                 </a>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 ">
+                 <a href="details.html?name=Striped+Shirt&price=750&image=imge/casl2.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/casl2.jpeg" alt="Shirt 7">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+                                  data-id="casl2" 
+       data-name="Striped Shirt" 
+       data-price="750" 
+       data-img="imge/casl2.jpeg"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Striped Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p><strong class="text-success">₹750</strong> <del>₹950</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                 </a>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                 <a href="details.html?name=Summer+Shirt&price=550&image=imge/frml8.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml8.jpeg" alt="Shirt 8">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"
+                          data-id="frml8" 
+       data-name="Summer Shirt" 
+       data-price="550" 
+       data-img="imge/frml8.jpeg"   ></i></span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Summer Shirt</h5>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p><strong class="text-success">₹550</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                 </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Promotion Banner -->
+<section class="promo-banner d-flex align-items-center justify-content-center ">
+    <div class="promo-content text-center text-white">
+        <h2 class="mb-2">🎉 Limited Time Offer!</h2>
+        <p class="mb-0">Get Up to <strong>20% Off</strong> on Selected Collections. Use Code <span class="promo-code">FAB20</span></p>
+    </div>
+</section>
+<!-- ------new araivel---------- -->
+<section class="new-arrivals my-5">
+    <h3 class="text-center"><span class="text-success">New</span> Arrivals</h3>
+
+    <div class="carousel-wrapper position-relative ">
+        <button class="carousel-arrow prev">&#10094;</button>
+
+        <div class="carousel-container">
+            <div class="carousel-cards">
+                <!-- -product1-- -->
+             <a href="details.html?name=Pure+Cotton+Shirt&price=500&image=imge/casl3.jpeg&category=shirt" class="text-decoration-none text-dark">
+                 
+                 <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/casl3.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pure Cotton Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="casl3" 
+       data-name="Pure Cotton Shirt" 
+       data-price="500" 
+       data-img="imge/casl3.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                
+                <!-- --product2-- -->
+             <a href="details.html?name=Formal+Cotton+Pant&price=700&image=imge/frmlp1.jpeg&category=pant" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frmlp1.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Formal Cotton Pant</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frmlp1" 
+       data-name="Formal Cotton Pant" 
+       data-price="700" 
+       data-img="imge/frmlp1.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹700</strong> <del>₹900</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                </a>
+                <!-- --product3-- -->
+                 <a href="details.html?name=Polo+Fit+Pant&price=750&image=imge/frmlp2.jpeg&category=pant" class="text-decoration-none text-dark">
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frmlp2.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Polo Fit Pant</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frmlp2" 
+       data-name="Polo Fit Pant" 
+       data-price="750" 
+       data-img="imge/frmlp2.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹750</strong> <del>₹1000</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                </a>
+                <!-- --product4-- -->
+             <a href="details.html?name=Casoul+Shirt&price=530&image=imge/casl4.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/casl4.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Casoul Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="casl4" 
+       data-name="Casoul Shirt" 
+       data-price="530" 
+       data-img="imge/casl4.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹530</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product5-- -->
+             <a href="details.html?name=Pure+Cotton+Pant&price=1200&image=imge/frmlp3.jpeg&category=pant" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frmlp3.jpeg" alt="caslp4 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pure Cotton Pant</h5>
+                     <span  class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frmlp3" 
+       data-name="Pure Cotton Pant" 
+       data-price="1200" 
+       data-img="imge/frmlp3.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹1200</strong> <del>₹1500</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product6-- -->
+             <a href="details.html?name=Pure+Cotton+Shirt&price=500&image=imge/frml12.jpeg&category=shirt" class="text-decoration-none text-dark">
+                 
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml12.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pure Cotton Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frml12" 
+       data-name="Pure Cotton Shirt" 
+       data-price="500" 
+       data-img="imge/frml12.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product7-- -->
+             <a href="details.html?name=Lenin+Shirt&price=500&image=imge/frml11.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml11.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lenin Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frml1" 
+       data-name="Lenin Shirt" 
+       data-price="500" 
+       data-img="imge/frml11.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹500</strong> <del>₹600</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product8-- -->
+             <a href="details.html?name=Formal+Regular+Fit+Shirt&price=600&image=imge/frml10.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml10.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Formal Regular Fit Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frml10" 
+       data-name="Formal Regular Fit Shirt" 
+       data-price="600" 
+       data-img="imge/frml10.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹600</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                
+             </a>
+                <!--  Product Card repeat-->
+                     <!-- -product1-- -->
+             <a href="details.html?name=Pure+Cotton+Shirt&price=500&image=imge/casl3.jpeg&category=shirt" class="text-decoration-none text-dark">
+                 
+                 <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/casl3.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pure Cotton Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="casl3" 
+       data-name="Pure Cotton Shirt" 
+       data-price="500" 
+       data-img="imge/casl3.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                
+                <!-- --product2-- -->
+             <a href="details.html?name=Formal+Cotton+Pant&price=700&image=imge/frmlp1.jpeg&category=pant" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frmlp1.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Formal Cotton Pant</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frmlp1" 
+       data-name="Formal Cotton Pant" 
+       data-price="700" 
+       data-img="imge/frmlp1.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹700</strong> <del>₹900</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                </a>
+                <!-- --product3-- -->
+                 <a href="details.html?name=Polo+Fit+Pant&price=750&image=imge/frmlp2.jpeg&category=pant" class="text-decoration-none text-dark">
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frmlp2.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Polo Fit Pant</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frmlp2" 
+       data-name="Polo Fit Pant" 
+       data-price="750" 
+       data-img="imge/frmlp2.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹750</strong> <del>₹1000</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                </a>
+                <!-- --product4-- -->
+             <a href="details.html?name=Casoul+Shirt&price=530&image=imge/casl4.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/casl4.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Casoul Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="casl4" 
+       data-name="Casoul Shirt" 
+       data-price="530" 
+       data-img="imge/casl4.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹530</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product5-- -->
+             <a href="details.html?name=Pure+Cotton+Pant&price=1200&image=imge/frmlp3.jpeg&category=pant" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frmlp3.jpeg" alt="caslp4 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pure Cotton Pant</h5>
+                     <span  class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frmlp3" 
+       data-name="Pure Cotton Pant" 
+       data-price="1200" 
+       data-img="imge/frmlp3.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹1200</strong> <del>₹1500</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product6-- -->
+             <a href="details.html?name=Pure+Cotton+Shirt&price=500&image=imge/frml12.jpeg&category=shirt" class="text-decoration-none text-dark">
+                 
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml12.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pure Cotton Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frml12" 
+       data-name="Pure Cotton Shirt" 
+       data-price="500" 
+       data-img="imge/frml12.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product7-- -->
+             <a href="details.html?name=Lenin+Shirt&price=500&image=imge/frml11.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml11.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lenin Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frml1" 
+       data-name="Lenin Shirt" 
+       data-price="500" 
+       data-img="imge/frml11.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹500</strong> <del>₹600</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+             </a>
+                <!-- --product8-- -->
+             <a href="details.html?name=Formal+Regular+Fit+Shirt&price=600&image=imge/frml10.jpeg&category=shirt" class="text-decoration-none text-dark">
+
+                  <div class="card shadow-sm product-card">
+                    <div class="position-relative">
+                        <img src="imge/frml10.jpeg" alt="Shirt 1">
+                
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Formal Regular Fit Shirt</h5>
+                     <span class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="frml10" 
+       data-name="Formal Regular Fit Shirt" 
+       data-price="600" 
+       data-img="imge/frml10.jpeg"></i>
+                     </span>
+                        <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+    
+                        <p><strong class="text-success">₹600</strong> <del>₹700</del></p>
+                    </div>
+                    <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+                </div>
+                
+             </a>
+                
+
+            </div>
+        </div>
+
+        <button class="carousel-arrow next">&#10095;</button>
+    </div>
+</section>
+<!-- Promotion Banner -->
+<section class="promo-banner d-flex align-items-center justify-content-center ">
+    <div class="promo-content text-center text-white p-5">
+        <h2 class="mb-2">Discover Premium Accessories</h2>
+        <p class="mb-0">Upgrade your style with our latest accessories collection. Quality meets fashion.</p>
+         <a href="#shopnow" class="btn btn-light text-success mt-3">Shop Now</a>
+    </div>
+</section>
+<!-- --------assessories------- -->
+ <section class="accessories" id="shopnow">
+    
+<div class="container py-5 my-5">
+  <h3> <span class="text-success">Accessoies </span>Collections</h3>
+  
+  <!-- Category Buttons -->
+  <div class="category-btns text-center mb-4">
+    <button class="btn btn-primary active" onclick="showCategory('walletBelts')">Wallet & Belts</button>
+    <button class="btn btn-success" onclick="showCategory('perfumeCap')">Perfume & Cap</button>
+    <button class="btn btn-warning text-light" onclick="showCategory('chainRing')">Chain & Ring</button>
+  </div>
+  
+  <!-- Cards Container -->
+  <div class="row g-4 justify-content-center d-flex align-items-stretch my-3">
+
+    <!-- Wallet & Belts Cards  -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+                <!-- ------wallet1-- -->
+             
+  <a href="details.html?name=Stylish+Wallet&price=490&image=imge/walllert1.jpg&category=wallet" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/walllert1.jpg" alt="Wallet 1" class="rounded-5 p-2">
+          
+                               <a class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="wallert1" 
+       data-name="Stylish Wallet" 
+       data-price="490" 
+       data-img="imge/walllert1.jpg"></i>
+                               </a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish Wallet </h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹490</strong> <del>₹700</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+      </div>
+         </a>
+          </a>
+         
+         
+      <!-- -wallet2---- -->
+       <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Leather+Wallet&price=500&image=imge/wallet2.jpg&category=wallet" class="text-decoration-none text-dark">
+
+       <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/wallet2.jpg" alt="Wallet2"class="rounded-5 p-2">
+          
+
+                               <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="wallet2" 
+       data-name="Leather Wallet" 
+       data-price="500" 
+       data-img="imge/wallet2.jpg"></i>
+</a>
+          
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Leather Wallet</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping" ></i></div>
+      </div>
+      </a>
+        </div>
+
+    <!-- wallet3 -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Brown+Leather+Wallet&price=500&image=imge/wallet3.jpg&category=wallet" class="text-decoration-none text-dark">
+        
+       <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/wallet3.jpg" alt="Wallet3"class="rounded-5 p-2">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="wallet3" 
+       data-name="Brown Leather Wallet" 
+       data-price="500" 
+       data-img="imge/wallet3.jpg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Brown  Wallet</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+       </div>
+       <!-- wallet4 -->
+         <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Black+Leather+Wallet&price=500&image=imge/wallet4.jpg&category=wallet" class="text-decoration-none text-dark">
+
+       <div class="card shadow-sm product-card border-primary rounded-5 p-2">
+        <div class="position-relative">
+          <img src="imge/wallet4.jpg" alt="Wallet4"class="rounded-5">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="wallet4" 
+       data-name=" Black Leather Wallet" 
+       data-price="500" 
+       data-img="imge/wallet4.jpg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title"> Black  Wallet</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹500</strong> <del>₹700</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+
+  </div>
+    <div class="row row g-4 justify-content-center d-flex align-items-stretch">
+
+     <!-- belt1 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Office+Wear+Belt&price=600&image=imge/belt1.webp&category=Belt" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/belt1.webp" alt="belt1" class="rounded-5 p-2">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="belt1" 
+       data-name="Office Wear Belt" 
+       data-price="600" 
+       data-img="imge/belt1.webp"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title"> Office Wear Belt</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹600</strong> <del>₹800</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+      <!-- belt2 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Classic+Belt&price=600&image=imge/belt2.webp&category=Belt" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/belt2.webp" alt="belt2"class="rounded-5 p-2">
+          <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="belt2" 
+       data-name="Classic Belt" 
+       data-price="600" 
+       data-img="imge/belt2.webp"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Classic Belt</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹600</strong> <del>₹800</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+      <!-- belt3 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Casual+Belt&price=600&image=imge/belt3.jpg&category=Belt" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/belt3.jpg" alt="belt3" class="rounded-5 p-2">
+         <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="belt3" 
+       data-name="Casual Belt" 
+       data-price="600" 
+       data-img="imge/belt3.jpg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Casual Belt</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹600</strong> <del>₹800</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+      <!-- belt4 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card walletBelts">
+  <a href="details.html?name=Leather+Belt&price=600&image=imge/belt4.webp&category=Belt" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-primary rounded-5">
+        <div class="position-relative">
+          <img src="imge/belt4.webp" alt="belt4" class="rounded-5 p-2">
+         <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="belt4" 
+       data-name="Leather Belt" 
+       data-price="600" 
+       data-img="imge/belt4.webp"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Leather Belt</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹600</strong> <del>₹800</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+</div>
+
+    
+
+    <!-- Perfume & Cap Cards -->
+     <div class="row g-4 justify-content-center d-flex align-items-stretch my-3">
+        <!-- perfume1 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Denver+Green&price=300&image=imge/perfume1.webp&category=Perfume" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/perfume1.webp" alt="Perfume1" class="rounded-5 p-2">
+          <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="perfume1" 
+       data-name="Denver Green" 
+       data-price="300" 
+       data-img="imge/perfume1.webp"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Denver Green</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹300</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+
+       <!-- perfume2 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Denver+Blue&price=300&image=imge/perfume2.jpg&category=Perfume" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/perfume2.jpg" alt="Perfume2" class="rounded-5 p-2">
+            <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="perfume2" 
+       data-name="Denver Blue" 
+       data-price="350" 
+       data-img="imge/perfume2.jpg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Denver Blue</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹350</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+       <!-- perfume3 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Park+Avenue&price=300&image=imge/perfume3.jpg&category=Perfume" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/perfume3.jpg" alt="Perfume3" class="rounded-5 p-2">
+            <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="perfume3" 
+       data-name="Park Avenue" 
+       data-price="300" 
+       data-img="imge/perfume3.jpg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Park Avenue</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹300</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+           <!-- perfume4 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Park+Avenue+voyage&price=300&image=imge/perfume4.webp&category=Perfume" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/perfume4.webp" alt="Perfume4"  class="rounded-5 p-2">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="perfume4" 
+       data-name="Park Avenue voyage" 
+       data-price="350" 
+       data-img="imge/perfume4.webp"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Park Avenue voyage</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹350</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+    
+    </div>
+    <!--  Cap cards  -->
+         <div class="row g-4 justify-content-center d-flex align-items-stretch">
+            <!-- cap1 -->
+               <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Stylish+Blue+Cap&price=300&image=imge/cap1.jpeg&category=Cap" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/cap1.jpeg" alt="cap1"  class="rounded-5 p-2">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="cap1" 
+       data-name="Stylish Blue Cap" 
+       data-price="300" 
+       data-img="imge/cap1.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish Blue Cap</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹300</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+     <!-- cap2 -->
+               <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Stylish+Red+Cap&price=300&image=imge/cap2.jpeg&category=Cap" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/cap2.jpeg" alt="cap2"  class="rounded-5 p-2">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="cap2" 
+       data-name="Stylish Red Cap" 
+       data-price="300" 
+       data-img="imge/cap2.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish Red Cap</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹300</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+     <!-- cap3 -->
+               <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Stylish+Grey+Cap&price=300&image=imge/cap3.jpeg&category=Cap" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/cap3.jpeg" alt="cap3"  class="rounded-5 p-2">
+          <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="cap3" 
+       data-name="Stylish Grey Cap" 
+       data-price="300" 
+       data-img="imge/cap3.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish  Grey Cap</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹300</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+     <!-- cap4 -->
+               <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card perfumeCap d-none">
+  <a href="details.html?name=Stylish+Sandal+Cap&price=300&image=imge/cap4.jpeg&category=Cap" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-success rounded-5">
+        <div class="position-relative">
+          <img src="imge/cap4.jpeg" alt="cap4" class="rounded-5 p-2">
+           <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="cap4" 
+       data-name="Stylish  Sandal Cap" 
+       data-price="300" 
+       data-img="imge/cap4.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish  Sandal Cap</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹300</strong> <del>₹500</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+
+         </div>
+
+
+    <!-- Chain & Ring Cards  -->
+     <div class="row g-4 justify-content-center d-flex align-items-stretch my-3">
+        <!-- chain1 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=Stylish+Silver+Chain&price=200&image=imge/chain1.jpeg&category=Chain" class="text-decoration-none text-dark">
+      <div class="card shadow-sm product-card border-warning rounded-5">
+        <div class="position-relative">
+          <img src="imge/chain1.jpeg" alt="Chain1" class="rounded-5 p-2">
+          <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="chain1" 
+       data-name="Stylish Silver Chain" 
+       data-price="200" 
+       data-img="imge/chain1.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish Silver Chain</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹200</strong> <del>₹300</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+     <!-- chain2 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=Men's+Silver+Chain&price=200&image=imge/chain2.jpeg&category=Chain" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-warning rounded-5">
+        <div class="position-relative">
+          <img src="imge/chain2.jpeg" alt="Chain2" class="rounded-5 p-2">
+                <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="chain2" 
+       data-name="Men's Silver Chain" 
+       data-price="200" 
+       data-img="imge/chain2.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Men's Silver Chain</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹200</strong> <del>₹300</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+     <!-- chain3 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=Stylish+Chain&price=200&image=imge/chain3.jpeg&category=Chain" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-warning rounded-5">
+        <div class="position-relative">
+          <img src="imge/chain3.jpeg" alt="Chain3" class="rounded-5 p-2">
+                <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="chain3" 
+       data-name="Stylish Chain" 
+       data-price="200" 
+       data-img="imge/chain3.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Stylish Chain</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹200</strong> <del>₹300</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+     <!-- chain4 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=New+Silver+Chain&price=200&image=imge/chain4.jpeg&category=Chain" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-warning rounded-5">
+        <div class="position-relative">
+          <img src="imge/chain4.jpeg" alt="Chain4" class="rounded-5 p-2">
+                <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="chain4" 
+       data-name=" New Silver Chain" 
+       data-price="200" 
+       data-img="imge/chain4.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">New Silver Chain</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹200</strong> <del>₹300</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+    </div>
+
+    <!-- Ring Sections -->
+     <div class="row g-4 justify-content-center d-flex align-items-stretch ">
+      <!-- ring1 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=Silver+with+Black+Ring&price=100&image=imge/ring1.jpeg&category=Ring" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-warning rounded-5">
+        <div class="position-relative">
+          <img src="imge/ring1.jpeg" alt="ring1"  class="rounded-5 p-2">
+                <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="ring1" 
+       data-name=" Silver with Black Ring" 
+       data-price="100" 
+       data-img="imge/ring1.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Silver with Black Ring</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹100</strong> <del>₹150</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+    <!-- ring2 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=Silver+Diamond+Ring&price=100&image=imge/ring2.jpeg&category=Ring" class="text-decoration-none text-dark">
+      
+      <div class="card shadow-sm product-card border-warning rounded-5">
+        <div class="position-relative">
+          <img src="imge/ring2.jpeg" alt="ring2" class="rounded-5 p-2">
+                      <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="ring2" 
+       data-name=" Silver Diamond Ring" 
+       data-price="100" 
+       data-img="imge/ring2.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Silver Diamond Ring</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹100</strong> <del>₹150</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+    <!-- ring3 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=Silver+Ring&price=100&image=imge/ring3.jpeg&category=Ring" class="text-decoration-none text-dark">
+
+      <div class="card shadow-sm product-card border-warning rounded-5" >
+        <div class="position-relative">
+          <img src="imge/ring3.jpeg" alt="ring3" class="rounded-5 p-2">
+                      <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="ring3" 
+       data-name=" Silver Ring" 
+       data-price="100" 
+       data-img="imge/ring3.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title">Silver Ring</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹100</strong> <del>₹150</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+    <!-- ring4 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-3 category-card chainRing d-none">
+  <a href="details.html?name=New+Silver+Ring&price=100&image=imge/ring4.jpeg&category=Ring" class="text-decoration-none text-dark">
+      
+      <div class="card shadow-sm product-card border-warning rounded-5" >
+        <div class="position-relative">
+          <img src="imge/ring4.jpeg" alt="ring4"class="rounded-5 p-2">
+                      <a href="#" class="heart-icon">
+    <i class="fa-regular fa-heart" 
+       data-id="ring4" 
+       data-name="New Silver Ring" 
+       data-price="100" 
+       data-img="imge/ring4.jpeg"></i>
+</a>
+        </div>
+        <div class="card-body text-center position-relative">
+          <h5 class="card-title"> New Silver Ring</h5>
+          <p class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          <p><strong class="text-success">₹100</strong> <del>₹150</del></p>
+        </div>
+        <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+      </div>
+  </a>
+    </div>
+</div>
+
+</div>
+</section>
+
+
+
+<!-- ----------login modal---------------------- -->
+ 
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title fw-bold" id="loginModalLabel">Login to Your Account</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email address</label>
+            <input type="email" class="form-control rounded-pill" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fw-semibold">Password</label>
+            <input type="password" class="form-control rounded-pill" id="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn-modal  w-100 rounded-pill">Login</button>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <small class="text-muted">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow-lg">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title fw-bold" id="registerModalLabel">Create New Account</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="registerForm">
+          <div class="mb-3">
+            <label for="regName" class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control rounded-pill" id="regName" placeholder="Your full name" required>
+          </div>
+          <div class="mb-3">
+            <label for="regAddress" class="form-label fw-semibold">Address</label>
+            <input type="text" class="form-control rounded-pill" id="regAddress" placeholder="Your address" required>
+          </div>
+          <div class="mb-3">
+            <label for="regEmail" class="form-label fw-semibold">Email address</label>
+            <input type="email" class="form-control rounded-pill" id="regEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="regPassword" class="form-label fw-semibold">Set Password</label>
+            <input type="password" class="form-control rounded-pill" id="regPassword" placeholder="Create a password" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100 rounded-pill">Register</button>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <small class="text-muted">Already have an account? <a href="#" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal">Login</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class=" pt-5 pb-4">
+  <hr>
+    <div class="container text-md-start">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 text-success fw-bold">FAB Men's Wear</h5>
+                <p>Providing quality men's wear at affordable prices. Fashion meets comfort and style.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 text-success fw-bold">Quick Links</h5>
+                <p><a href="index.html" class="text-muted text-decoration-none ">Home</a></p>
+                <p><a href="#shop" class="text-muted text-decoration-none">Shop</a></p>
+                <p><a href="#" class="text-muted text-decoration-none"data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+                <p><a href="#" class="text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4  text-success fw-bold">Contact</h5>
+                <p><i class="fas fa-home me-3"></i> 123 Junction Road, Virudhachalam-606001.</p>
+                <p><i class="fas fa-envelope me-3"></i> support@fabmenswear.com</p>
+                <p><i class="fas fa-phone me-3"></i> +91 98765 43210</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 text-success fw-bold">Follow Us</h5>
+                <a href="#" class="fs-4"><i class="fab fa-facebook-f text-dark "></i></a>
+                <a href="#" class="fs-4"><i class="fab fa-twitter text-dark"></i></a>
+                <a href="#" class="fs-4"><i class="fab fa-instagram text-dark"></i></a>
+                
+            </div>
+
+        </div>
+
+        <hr class="my-3 bg-dark">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center">© 2025 FAB Men's Wear. All rights reserved.</p>
+            </div>
+                <small class="text-center text-muted">Created by <strong>Surya</strong></small>
+
+        </div>
+    </div>
+</footer>
+
+
+<!-- ------------heart--------- -->
+<script>
+const productHearts = document.querySelectorAll('.heart-icon i');
+const heartCount = document.getElementById('heartCount');
+
+// Load wishlist from localStorage or empty array
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+// Update navbar counter initially
+heartCount.textContent = wishlist.length;
+
+// Function to save wishlist and update counter
+function updateWishlist() {
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    heartCount.textContent = wishlist.length;
+}
+
+// Initialize heart icons based on existing wishlist
+productHearts.forEach(heart => {
+    const productId = heart.dataset.id;
+    if(wishlist.find(p => p.id === productId)){
+        heart.classList.remove('fa-regular');
+        heart.classList.add('fa-solid');
+    }
+
+    // Heart click event
+    heart.addEventListener('click', e => {
+        e.preventDefault();
+        const product = {
+            id: heart.dataset.id,
+            name: heart.dataset.name,
+            price: heart.dataset.price,
+            img: heart.dataset.img
+        };
+
+        const index = wishlist.findIndex(p => p.id === product.id);
+
+        if(index === -1){
+            // Add to wishlist
+            wishlist.push(product);
+            heart.classList.remove('fa-regular');
+            heart.classList.add('fa-solid');
+        } else {
+            // Remove from wishlist
+            wishlist.splice(index,1);
+            heart.classList.remove('fa-solid');
+            heart.classList.add('fa-regular');
+        }
+
+        updateWishlist();
+    });
+});
+</script>
+
+<!-- --------arrival old----------- -->
+ <script>
+const cards = document.querySelector('.carousel-cards');
+const prevBtn = document.querySelector('.carousel-arrow.prev');
+const nextBtn = document.querySelector('.carousel-arrow.next');
+
+const card = document.querySelector('.product-card');
+const cardWidth = card.offsetWidth + 16; // 16 is the gap between cards
+let position = 0;
+
+prevBtn.addEventListener('click', () => {
+    if (position < 0) {
+        position += cardWidth;
+        cards.style.transform = `translateX(${position}px)`;
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    const maxScroll = -(cards.scrollWidth - cards.parentElement.offsetWidth);
+    if (position > maxScroll) {
+        position -= cardWidth;
+        cards.style.transform = `translateX(${position}px)`;
+    }
+});
+
+ </script>
+ <!-- --------assesories----------- -->
+<!-- buttonjs------ -->
+<script>
+function showCategory(category) {
+  const allCards = document.querySelectorAll('.category-card');
+  const visibleCards = document.querySelectorAll('.category-card:not(.d-none)');
+
+  visibleCards.forEach(card => card.classList.add('fade-out'));
+
+  setTimeout(() => {
+    allCards.forEach(card => {
+      card.classList.add('d-none');
+      card.classList.remove('fade-out','fade-in');
+      if(card.classList.contains(category)){
+        card.classList.remove('d-none');
+        card.classList.add('fade-in');
+      }
+    });
+  }, 300);
+}
+
+// Default category show
+window.onload = () => showCategory('walletBelts');
+
+// Heart icon click store data
+function storeWishlist(e, name, price, img){
+  e.preventDefault();
+  let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  wishlist.push({name:name, price:price, img:img});
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  alert(name + " added to wishlist!");
+}
+
+</script>
+
+<!-- ---bag--- -->
+ 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    let bagItems = JSON.parse(localStorage.getItem('bagItems')) || [];
+
+    // Function to update navbar bag count
+    function updateBagCount(){
+        const count = bagItems.reduce((sum,item)=>sum + item.quantity,0);
+        document.getElementById('bagCount').textContent = count;
+    }
+
+    updateBagCount();
+
+    // Initialize bag icons based on localStorage
+    document.querySelectorAll('.product-card').forEach(card => {
+        const bagIcon = card.querySelector('.add-bag i');
+        const heartIcon = card.querySelector('.heart-icon i');
+        const id = heartIcon.dataset.id;
+
+        if(bagItems.find(item => item.id === id)){
+            // Item already in bag → stable red
+            bagIcon.style.color = 'red';
+        }
+    });
+
+    // Handle Add to Bag click
+    document.querySelectorAll('.add-bag').forEach(bagBtn => {
+        bagBtn.addEventListener('click', () => {
+            const card = bagBtn.closest('.product-card');
+            const heartIcon = card.querySelector('.heart-icon i'); // for id reference
+
+            const id = heartIcon.dataset.id;
+            const name = heartIcon.dataset.name;
+            const price = parseInt(heartIcon.dataset.price);
+            const img = heartIcon.dataset.img;
+
+            let existingItem = bagItems.find(item => item.id === id);
+            if(existingItem){
+                existingItem.quantity++;
+            } else {
+                bagItems.push({id, name, price, img, quantity:1});
+            }
+
+            localStorage.setItem('bagItems', JSON.stringify(bagItems));
+            updateBagCount();
+
+            // Bag icon stable red
+            bagBtn.querySelector('i').style.color = 'red';
+        });
+    });
+
+});
+</script>
+
+<!-- ---------loginmodal------------  -->
+ <script>
+document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if(email && password){
+        alert(`Logged in as ${email}`);
+        // Add your login logic here
+        // Close the modal after login
+        var modalEl = document.getElementById('loginModal');
+        var modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+</script>
+<!-- ------------------register modal----------  -->
+ <script>
+document.getElementById('registerForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('regName').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+
+    if(name && email && password){
+        alert(`Registered successfully!\nName: ${name}\nEmail: ${email}`);
+        // Add your registration logic here (e.g., send to backend)
+        // Close modal after registration
+        var modalEl = document.getElementById('registerModal');
+        var modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+    } else {
+        alert('Please fill all fields.');
+    }
+});
+</script>
+
+<!-- -----detials-------- -->
+ <script>
+const products = [
+    { name: "Pure Cotton Shirt", price: 500, image: "imge/frml1.jpeg", category: "shirt" },
+    { name: "Formal Shirt", price: 1200, image: "imge/shirt1.jpg", category: "shirt" },
+    { name: "Casual T-Shirt", price: 700, image: "imge/tshirt1.jpg", category: "shirt" },
+    { name: "Blue Jeans Pants", price: 1500, image: "imge/pants1.jpg", category: "pants" },
+    { name: "Black Chinos Pants", price: 1600, image: "imge/pants2.jpg", category: "pants" },
+    { name: "Gold Ring", price: 2500, image: "imge/ring1.jpg", category: "ring" },
+    { name: "Silver Chain", price: 1800, image: "imge/chain1.jpg", category: "chain" },
+    { name: "Leather Belt", price: 900, image: "imge/belt1.jpg", category: "belt" },
+    { name: "Classic Leather Belt", price: 950, image: "imge/belt2.jpg", category: "belt" },
+    { name: "Cool Cap", price: 500, image: "imge/cap1.jpg", category: "cap" },
+    { name: "Leather Wallet", price: 500, image: "imge/walllert1.jpg", category: "wallet" },
+    { name: "Premium Wallet", price: 550, image: "imge/wallet3.jpg", category: "wallet" }
+];
+const productGrid = document.getElementById('productGrid');
+
+products.forEach(p => {
+    const col = document.createElement('div');
+    col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+    col.innerHTML = `
+        <a href="details.html?name=${encodeURIComponent(p.name)}" class="text-decoration-none text-dark">
+            <div class="card shadow-sm product-card position-relative">
+                <img src="${p.image}" alt="${p.name}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">${p.name}</h5>
+                    <p><strong>₹${p.price}</strong></p>
+                </div>
+            </div>
+        </a>
+    `;
+    productGrid.appendChild(col);
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

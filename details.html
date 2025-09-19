@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - FAB_MEN'S-WEAR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+   <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imge/logo-white.png">
+   
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+    *{
+            font-family: "Poppins", sans-serif;
+      
+    }
+    .product-img {
+      max-width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .related-products .card {
+      transition: transform 0.3s ease;
+         border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+    }
+
+    .related-products .card:hover {
+      transform: scale(1.05);
+    }
+
+    .add-bag
+     {
+         position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: #3D3C3B;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+    }
+
+    .heart-icon {
+      
+       position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 8px;
+            font-size: 1.2rem;
+            color: red;
+    }
+
+    .star-rating i {
+      color: gold;
+            font-size: 12px;
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .size-select {
+      margin-top: 10px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins", sans-serif;}
+:root{--text:#3D3C3B;}
+
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 2rem;
+      font-weight: 700;
+      /* font-style: italic; */
+      text-decoration: none;
+        font-family: "Dancing Script", cursive;;
+    }
+
+    .icon-link {
+      font-size: 1.5rem;
+      color: var(--text);
+      position: relative;
+    }
+
+    .nav-link {
+      color: var(--text);
+      font-weight: 500;
+      padding: 0.3rem 1rem; /* reduce vertical padding */
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: var(--green);
+    }
+
+    .nav-link.active {
+      color: var(--green);
+    
+    }
+
+    .navbar-search input {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* Badge Styles */
+    #heartCount,
+    #bagCount {
+      font-size: 0.65rem;
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      line-height: 18px;
+      top: 0;
+      transform: translate(50%, -50%);
+    }
+
+    .navbar-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-left: auto;
+    }
+
+    .navbar-toggler {
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      .navbar .container-fluid {
+        flex-wrap: nowrap;
+      }
+
+      .navbar-collapse {
+        background-color: white;
+        padding: 1rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        text-align: center;
+      }
+
+      .navbar-search {
+        margin-top: 1rem;
+        justify-content: center;
+      }
+
+      .navbar-collapse .nav-link {
+        display: block;
+        margin: 0.5rem auto;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar-search {
+        flex-grow: 1;
+        margin: 0 2rem;
+      }
+
+      .navbar-collapse {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Brand -->
+    <a class="brand me-3 text-success fw-bold" href="#">FAB</a>
+
+    <!-- Right icons -->
+    <div class="navbar-icons order-lg-2">
+      <a class="icon-link text-decoration-none " href="wishlist.html">
+        <i class="fa-regular fa-heart"></i>
+        <span id="heartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+
+      <a class="icon-link text-decoration-none " href="bag.html">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="bagCount" class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <form class="d-flex navbar-search align-items-center justify-content-center" role="search">
+        <input class="form-control m-2" type="search" placeholder="Search Products" />
+        <button class="btn btn-outline-dark m-2" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+
+      <!-- Nav Links -->
+      <a class="nav-link px-3 text-center " href="index.html">Home</a>
+      <a class="nav-link px-3 text-center" href="index.html">Shop</a>
+      <a class="nav-link px-3 text-center" href="#"data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+      <a class="nav-link px-3 text-center" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- Product Detail Section -->
+    <h3 class="text-center"><span class="text-success">Product</span> Details</h3>
+
+  <div class="container my-4">
+
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center my-2 ">
+        <img id="productImage" src="" alt="Product Image" class="img-fluid product-img  rounded-4 shadow-md" />
+      </div>
+      <div class="col-md-6  my-2" >
+        <div class="bg-light border-primary p-2 rounded-4 shadow-md">
+        <h2 id="productName"></h2>
+        <h4 id="productPrice" class="text-success fw-semibold"></h4>
+        <p>Category: <span id="productCategory" class="fw-semibold"></span></p>
+        <!-- Size Selection -->
+        <div class="size-select" id="sizeSelectContainer"></div>
+
+       <!-- Add to Bag button -->
+  <button id="addToBagBtn" class="btn btn-success mt-3">
+    <i class="fas fa-bag-shopping"></i> Add to Bag
+  </button>
+  <button id="addToWishlistBtn" class="btn btn-outline-danger mt-3">
+    <i class="fas fa-heart"></i> Wishlist
+</button>
+<p class="text-muted mt-3"><i class="fa-solid fa-circle-check"></i> High Qulaity &nbsp;   <span class="mx-5"><i class="fa-solid fa-award"></i> 1-year Warranty</span></p>
+<p class="text-muted mt-3"><p class="text-muted mt-3"><i class="fa-solid fa-truck"></i> Fast Delivery <span class="mx-5"><i class="fa-solid fa-rotate-left"></i>10 Days Return Policy</span></p>
+
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+  </div>
+
+  <!-- Related Products Section -->
+  <div class="container my-5">
+   
+    <h3 class=" mb-4"><span class="text-success">Related</span> Products</h3>
+
+    <div class="row related-products" id="relatedProductsContainer"></div>
+  </div>
+   <!-- Footer Section -->
+<footer class=" pt-5 pb-4">
+  <hr>
+    <div class="container text-md-start">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 text-success fw-bold">FAB Men's Wear</h5>
+                <p>Providing quality men's wear at affordable prices. Fashion meets comfort and style.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 text-success fw-bold">Quick Links</h5>
+                <p><a href="index.html" class="text-muted text-decoration-none">Home</a></p>
+                <p><a href="#" class="text-muted text-decoration-none">Shop</a></p>
+                <p><a href="#" class="text-muted text-decoration-none">Login</a></p>
+                <p><a href="#" class="text-muted text-decoration-none">Register</a></p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4  text-success fw-bold">Contact</h5>
+                <p><i class="fas fa-home me-3"></i> 123 Junction Road, Virudhachalam-606001.</p>
+                <p><i class="fas fa-envelope me-3"></i> support@fabmenswear.com</p>
+                <p><i class="fas fa-phone me-3"></i> +91 98765 43210</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-6 col-lg-3 col-12 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 text-success fw-bold">Follow Us</h5>
+                <a href="#" class="fs-4"><i class="fab fa-facebook-f text-dark "></i></a>
+                <a href="#" class="fs-4"><i class="fab fa-twitter text-dark"></i></a>
+                <a href="#" class="fs-4"><i class="fab fa-instagram text-dark"></i></a>
+                
+            </div>
+
+        </div>
+
+        <hr class="my-3 bg-dark">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center">© 2025 FAB Men's Wear. All rights reserved.</p>
+            </div>
+                <small class="text-center text-muted">Created by <strong>Surya</strong></small>
+
+        </div>
+    </div>
+</footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get('name');
+    const productPrice = params.get('price');
+    const productImage = params.get('image');
+    const productCategory = params.get('category');
+    
+
+    document.getElementById('productName').textContent = productName;
+    document.getElementById('productPrice').textContent = `₹${productPrice}`;
+    document.getElementById('productImage').src = productImage;
+    document.getElementById('productCategory').textContent = productCategory;
+
+    const sizeSelectContainer = document.getElementById('sizeSelectContainer');
+    const shirtSizes = ['S', 'M', 'L', 'XL', 'XXL'];
+    const pantSizes = ['28', '30', '32', '34', '36', '38', '40', '42'];
+    let sizeOptions = '';
+
+    if (productCategory === 'shirt') {
+      sizeOptions = shirtSizes.map(size => `<option value="${size}">${size}</option>`).join('');
+    } else if (productCategory === 'pant') {
+      sizeOptions = pantSizes.map(size => `<option value="${size}">${size}</option>`).join('');
+    }
+
+    if (sizeOptions) {
+      sizeSelectContainer.innerHTML = `
+        <label for="sizeSelect" class="form-label fw-bold">Select Size:</label>
+        <select class="form-select w-50" id="sizeSelect">
+          ${sizeOptions}
+        </select>
+      `;
+    }
+
+    const allProducts = [
+      // ---------------------shirt related---------
+      { name: "Pure Cotton Shirt", price: 500, image: "imge/frml1.jpeg", category: "shirt", oldPrice: 700 },
+      { name: "Formal Shirt", price: 650, image: "imge/frml2.jpeg", category: "shirt", oldPrice: 900 },
+      { name: "Casoul Shirt", price: 550, image: "imge/frml3.jpeg", category: "shirt", oldPrice: 750 },
+      { name: "Linen Shirt", price: 700, image: "imge/frml4.jpeg", category: "shirt", oldPrice: 950 },
+      { name: "Denim Shirt", price: 800, image: "imge/frml5.jpeg", category: "shirt", oldPrice: 1000 },
+      // -----------------------pant related--------------------
+      { name: "Formal Cotton Pant", price: 700, image: "imge/frmlp1.jpeg", category: "pant", oldPrice: 900 },
+      { name: "Polo Fit Pant", price: 750, image: "imge/frmlp2.jpeg", category: "pant", oldPrice: 1000 },
+      { name: "Pure Cotton Pant", price: 1000, image: "imge/frmlp3.jpeg", category: "pant", oldPrice: 1500 },
+      { name: "Men's Formal Cotton Pant", price: 900, image: "imge/pant.webp", category: "pant", oldPrice: 1200 },
+      { name: "Casoul Pant", price: 850, image: "imge/caslp1.jpeg", category: "pant", oldPrice: 990 },
+        // ---------------------------wallet related----------------
+      { name: "Leather Wallet ", price: 500, image: "imge/wallet2.jpg", category: "wallet", oldPrice: 700 },
+      { name: " Brown Leather Wallet", price: 500, image: "imge/wallet3.jpg", category: "wallet", oldPrice: 700 },
+      { name: "Black Leather Wallet", price: 500, image: "imge/wallet4.jpg", category: "wallet", oldPrice: 700 },
+      { name: "Stylish Wallet ", price: 490, image: "imge/walllert1.jpg", category: "wallet", oldPrice: 700 },
+       // ---------------------------Belt related----------------
+      { name: "Office Wear Belt ", price: 600, image: "imge/belt1.webp", category: "Belt", oldPrice: 800 },
+      { name: "Leather Belt ", price: 600, image: "imge/belt2.webp", category: "Belt", oldPrice: 800 },
+      { name: "Casual Belt ", price: 600, image: "imge/belt3.jpg", category: "Belt", oldPrice: 800 },
+      { name: "Leather Belt ", price: 600, image: "imge/belt4.webp", category: "Belt", oldPrice: 800 },
+       // ---------------------------perfume related----------------
+      { name: "Denver Green", price: 300, image: "imge/perfume1.webp", category: "Perfume", oldPrice: 500 },
+      { name: "Park Avenue voyage", price: 300, image: "imge/perfume4.webp", category: "Perfume", oldPrice: 500 },
+      { name: "Denver Blue", price: 300, image: "imge/perfume2.jpg", category: "Perfume", oldPrice: 500 },
+      { name: "Park Avenue", price: 300, image: "imge/perfume3.jpg", category: "Perfume", oldPrice: 500 },
+      // ---------------------------Cap related----------------
+      { name: "Stylish Blue Cap", price: 300, image: "imge/cap1.jpeg", category: "Cap", oldPrice: 500 },
+      { name: "Stylish Red Cap", price: 300, image: "imge/cap2.jpeg", category: "Cap", oldPrice: 500 },
+      { name: "Stylish Grey Cap", price: 300, image: "imge/cap3.jpeg", category: "Cap", oldPrice: 500 },
+      { name: "Stylish Sandal Cap", price: 300, image: "imge/cap4.jpeg", category: "Cap", oldPrice: 500 },
+      // ---------------------------Chain related----------------
+      { name: "Stylish Silver Chain", price: 200, image: "imge/chain1.jpeg", category: "Chain", oldPrice: 300 },
+      { name: "Men's Silver Chain", price: 200, image: "imge/chain2.jpeg", category: "Chain", oldPrice: 300 },
+      { name: "Stylish  Chain", price: 200, image: "imge/chain3.jpeg", category: "Chain", oldPrice: 300 },
+      { name: "New Silver Chain", price: 200, image: "imge/chain4.jpeg", category: "Chain", oldPrice: 300 },
+      // ---------------------------Ring related----------------
+      { name: "Stylish Silver Ring", price: 100, image: "imge/ring1.jpeg", category: "Ring", oldPrice: 150 },
+      { name: "Silver Diamond Ring", price: 100, image: "imge/ring2.jpeg", category: "Ring", oldPrice: 150 },
+      { name: " Silver Ring", price: 100, image: "imge/ring3.jpeg", category: "Ring", oldPrice: 150 },
+      { name: "New Silver Ring", price: 100, image: "imge/ring4.jpeg", category: "Ring", oldPrice: 150 },   
+      
+    ];
+
+    const relatedContainer = document.getElementById('relatedProductsContainer');
+    const relatedProducts = allProducts
+      .filter(p => p.category === productCategory && p.name !== productName)
+      .slice(0, 4);
+
+    relatedProducts.forEach(p => {
+      const card = document.createElement('div');
+      // card.classList.add('col-md-3', 'mb-4');
+      card.classList.add('col-12', 'col-md-6', 'col-lg-3', 'mb-4');
+
+      card.innerHTML = `
+        <a href="details.html?name=${encodeURIComponent(p.name)}&price=${p.price}&image=${encodeURIComponent(p.image)}&category=${p.category}" class="text-decoration-none text-dark">
+          <div class="card shadow-sm position-relative product-card">
+            <img src="${p.image}" class="card-img-top" alt="${p.name}">
+            <div class="card-body">
+              <h5 class="card-title">${p.name}</h5>
+              <a href="#" class="heart-icon">
+                <i class="fa-regular fa-heart"
+                  data-id="${p.image}"
+                  data-name="${p.name}"
+                  data-price="${p.price}"
+                  data-img="${p.image}"></i>
+              </a>
+              <p class="star-rating mb-1">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </p>
+              <p><strong class="text-success">₹${p.price}</strong> <del>₹${p.oldPrice}</del></p>
+            </div>
+            <div class="add-bag"><i class="fas fa-bag-shopping"></i></div>
+          </div>
+        </a>
+      `;
+      relatedContainer.appendChild(card);
+    });
+  </script>
+
+  
+
+<!-- ------------heart--------- -->
+<script>
+const productHearts = document.querySelectorAll('.heart-icon i');
+const heartCount = document.getElementById('heartCount');
+
+// Load wishlist from localStorage or empty array
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+// Update navbar counter initially
+heartCount.textContent = wishlist.length;
+
+// Function to save wishlist and update counter
+function updateWishlist() {
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    heartCount.textContent = wishlist.length;
+}
+
+// Initialize heart icons based on existing wishlist
+productHearts.forEach(heart => {
+    const productId = heart.dataset.id;
+    if(wishlist.find(p => p.id === productId)){
+        heart.classList.remove('fa-regular');
+        heart.classList.add('fa-solid');
+    }
+
+    // Heart click event
+    heart.addEventListener('click', e => {
+        e.preventDefault();
+        const product = {
+            id: heart.dataset.id,
+            name: heart.dataset.name,
+            price: heart.dataset.price,
+            img: heart.dataset.img
+        };
+
+        const index = wishlist.findIndex(p => p.id === product.id);
+
+        if(index === -1){
+            // Add to wishlist
+            wishlist.push(product);
+            heart.classList.remove('fa-regular');
+            heart.classList.add('fa-solid');
+        } else {
+            // Remove from wishlist
+            wishlist.splice(index,1);
+            heart.classList.remove('fa-solid');
+            heart.classList.add('fa-regular');
+        }
+
+        updateWishlist();
+    });
+});
+</script>
+
+<!-- ---bag--- -->
+ 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    let bagItems = JSON.parse(localStorage.getItem('bagItems')) || [];
+
+    // Function to update navbar bag count
+    function updateBagCount(){
+        const count = bagItems.reduce((sum,item)=>sum + item.quantity,0);
+        document.getElementById('bagCount').textContent = count;
+    }
+
+    updateBagCount();
+
+    // Initialize bag icons based on localStorage
+    document.querySelectorAll('.product-card').forEach(card => {
+        const bagIcon = card.querySelector('.add-bag i');
+        const heartIcon = card.querySelector('.heart-icon i');
+        const id = heartIcon.dataset.id;
+
+        if(bagItems.find(item => item.id === id)){
+            // Item already in bag → stable red
+            bagIcon.style.color = 'red';
+        }
+    });
+
+    // Handle Add to Bag click
+    document.querySelectorAll('.add-bag').forEach(bagBtn => {
+        bagBtn.addEventListener('click', () => {
+            const card = bagBtn.closest('.product-card');
+            const heartIcon = card.querySelector('.heart-icon i'); // for id reference
+
+            const id = heartIcon.dataset.id;
+            const name = heartIcon.dataset.name;
+            const price = parseInt(heartIcon.dataset.price);
+            const img = heartIcon.dataset.img;
+
+            let existingItem = bagItems.find(item => item.id === id);
+            if(existingItem){
+                existingItem.quantity++;
+            } else {
+                bagItems.push({id, name, price, img, quantity:1});
+            }
+
+            localStorage.setItem('bagItems', JSON.stringify(bagItems));
+            updateBagCount();
+
+            // Bag icon stable red
+            bagBtn.querySelector('i').style.color = 'red';
+        });
+    });
+
+});
+</script>
+<script>
+  
+document.addEventListener('DOMContentLoaded', () => {
+    const addToBagBtn = document.getElementById('addToBagBtn');
+    const params = new URLSearchParams(window.location.search);
+    const product = {
+        id: params.get('name'),
+        name: params.get('name'),
+        price: parseFloat(params.get('price')),
+        img: params.get('image'),
+        quantity: 1
+    };
+
+    let bagItems = JSON.parse(localStorage.getItem('bagItems')) || [];
+
+    function updateBagCount() {
+        const count = bagItems.reduce((sum,item)=>sum + item.quantity,0);
+        document.getElementById('bagCount').textContent = count;
+    }
+
+    // Check if product already in bag
+    function toggleBagBtn() {
+        const exists = bagItems.find(item => item.id === product.id);
+        if(exists){
+            addToBagBtn.textContent = "Remove from Bag";
+            addToBagBtn.classList.remove('btn-success');
+            addToBagBtn.classList.add('btn-danger');
+        } else {
+            addToBagBtn.innerHTML = `<i class="fas fa-bag-shopping"></i> Add to Bag`;
+            addToBagBtn.classList.remove('btn-danger');
+            addToBagBtn.classList.add('btn-success');
+        }
+    }
+
+    toggleBagBtn();
+    updateBagCount();
+
+    addToBagBtn.addEventListener('click', () => {
+        const index = bagItems.findIndex(item => item.id === product.id);
+        if(index === -1){
+            bagItems.push(product);
+        } else {
+            bagItems.splice(index,1);
+        }
+        localStorage.setItem('bagItems', JSON.stringify(bagItems));
+        toggleBagBtn();
+        updateBagCount();
+    });
+});
+
+</script>
+<!-- for main product heart  -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const wishlistBtn = document.getElementById('addToWishlistBtn');
+    const params = new URLSearchParams(window.location.search);
+    const product = {
+        id: params.get('name'),
+        name: params.get('name'),
+        price: parseFloat(params.get('price')),
+        img: params.get('image')
+    };
+
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    function updateHeartCount() {
+        document.getElementById('heartCount').textContent = wishlist.length;
+    }
+
+    function toggleWishlistBtn() {
+        const exists = wishlist.find(item => item.id === product.id);
+        if(exists){
+            wishlistBtn.textContent = "Remove from Wishlist";
+            wishlistBtn.classList.add('btn-danger');
+            wishlistBtn.classList.remove('btn-outline-danger');
+        } else {
+            wishlistBtn.innerHTML = `<i class="fas fa-heart"></i> Wishlist`;
+            wishlistBtn.classList.remove('btn-danger');
+            wishlistBtn.classList.add('btn-outline-danger');
+        }
+    }
+
+    toggleWishlistBtn();
+    updateHeartCount();
+
+    wishlistBtn.addEventListener('click', () => {
+        const index = wishlist.findIndex(item => item.id === product.id);
+        if(index === -1){
+            wishlist.push(product);
+        } else {
+            wishlist.splice(index,1);
+        }
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        toggleWishlistBtn();
+        updateHeartCount();
+    });
+});
+
+
+</script>
+<!-- test  -->
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
