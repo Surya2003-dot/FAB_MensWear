@@ -14,7 +14,7 @@
     }
 
     body {
-      padding-top: 70px; /* for fixed navbar space */
+      padding-top: 70px;
     }
     /* Navbar */
     .navbar {
@@ -155,7 +155,7 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: 420px;
         }
         .popular .product-card:hover  {
     /* transform: scale(1.05);
@@ -202,14 +202,14 @@
             font-size: 12px;
         }
         #heartCount {
-    font-size: 0.7rem;       /* smaller number */
-    width: 18px;             /* small circle */
+    font-size: 0.7rem;       
+    width: 18px;            
     height: 18px;
-    padding: 0;              /* remove extra padding */
-    line-height: 18px;       /* center the number */
-    top: 0;                  /* slightly adjust */
-    /* start: 100%;             next to the heart */
-    transform: translate(50%, -50%); /* fine-tune position */
+    padding: 0;              
+    line-height: 18px;       
+    top: 0;                  
+    /* start: 100%;              */
+    transform: translate(50%, -50%); 
 }
 
 #bagCount{
@@ -226,8 +226,8 @@
 /* Full-width Promotion Banner */
 .promo-banner {
     width: 100%;
-    height: 150px;
-    background: linear-gradient(135deg, #3D3C3B, #28a745); /* Change colors as you like */
+    height: 200px;
+    background: linear-gradient(135deg, #3D3C3B, #28a745); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,6 +237,7 @@
 .promo-content h2 {
     font-size: 1.8rem;
     font-weight: 700;
+    
 }
 
 .promo-content p {
@@ -254,7 +255,7 @@
 /* Mobile adjustments */
 @media (max-width: 575px) {
     .promo-banner {
-        height: 130px;
+        height: 190px;
     }
     .promo-content h2 {
         font-size: 1.3rem;
@@ -366,7 +367,7 @@
     margin-bottom:10px;
 } 
 .accessories .product-card img {
-    height:230px;    
+    height:280px;    
      width:100%; 
      transition: transform 0.3s;
     }
@@ -374,13 +375,24 @@
     transform: scale(1.05);
 }
 .accessories .product-card {
+    height: 400px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.accessories .product-card:hover {transform: scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
-.accessories .fade-in {animation: fadeIn 0.5s forwards;}
-.accessories .fade-out {animation: fadeOut 0.3s forwards;}
-@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
-@keyframes fadeOut {from {opacity:1;} to {opacity:0;}}
+.accessories .product-card:hover {
+    transform: scale(1.03);
+     box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+.accessories .fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+.accessories .fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+@keyframes fadeIn {
+    from {opacity:0;} to {opacity:1;}
+}
+@keyframes fadeOut {
+    from {opacity:1;} to {opacity:0;
+    }}
 
 /* ---------footersection-------- */
 footer {
