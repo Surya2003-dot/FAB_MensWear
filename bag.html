@@ -329,6 +329,27 @@ a {
     margin-top: 100px;
   }
 
+  /* -----order sweetalert------- */
+  .swal2-container {
+    z-index: 999999999 ; 
+}
+/* Optional Customization */
+.swal2-popup {
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+}
+
+.swal2-title {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.swal2-confirm {
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
 
 </style>
 </head>
@@ -657,10 +678,26 @@ document.addEventListener('DOMContentLoaded', () => {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-// Dynamic Form Fields by Category
+// Dynamic order Form Fields by Category
+
 function getProductFields(product) {
   let fields = '';
-  if (product.name.toLowerCase().includes('shirt') || product.name.toLowerCase().includes('pant')) {
+
+  const lowerName = product.name.toLowerCase();
+
+  //  Image + Name with small preview
+  fields += `
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <img src="${product.img}" alt="${product.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
+      <div>
+        <h6 class="fw-bold mb-0">${product.name}</h6>
+        <small class="text-muted">₹${(product.price * product.quantity).toFixed(2)} (x${product.quantity})</small>
+      </div>
+    </div>
+  `;
+
+  //  Shirt
+  if (lowerName.includes('shirt')) {
     fields += `
       <div class="mb-2">
         <label class="form-label">Size</label>
@@ -670,42 +707,24 @@ function getProductFields(product) {
         </select>
       </div>`;
   }
-  else if (product.name.toLowerCase().includes('cap')) {
+
+  //  Pant
+  else if (lowerName.includes('pant')) {
     fields += `
       <div class="mb-2">
-        <label class="form-label">Color</label>
-        <input type="text" class="form-control rounded-pill" placeholder="Enter color" required>
-      </div>
-      <div class="mb-2">
-        <label class="form-label">Size</label>
+        <label class="form-label">Waist Size</label>
         <select class="form-select rounded-pill" required>
-          <option value="">Select Size</option>
-          <option>Free Size</option><option>S</option><option>M</option>
+          <option value="">Select Waist Size</option>
+          <option>28</option><option>30</option><option>32</option><option>34</option>
+          <option>36</option><option>38</option><option>40</option><option>42</option>
         </select>
       </div>`;
   }
-  else if (product.name.toLowerCase().includes('wallet') || product.name.toLowerCase().includes('belt')) {
-    fields += `
-      <div class="mb-2">
-        <label class="form-label">Material</label>
-        <select class="form-select rounded-pill" required>
-          <option value="">Select Material</option>
-          <option>Leather</option><option>Faux Leather</option><option>Fabric</option>
-        </select>
-      </div>`;
-  }
-  else if (product.name.toLowerCase().includes('chain') || product.name.toLowerCase().includes('ring')) {
-    fields += `
-      <div class="mb-2">
-        <label class="form-label">Metal Type</label>
-        <select class="form-select rounded-pill" required>
-          <option value="">Select Metal</option>
-          <option>Gold</option><option>Silver</option><option>Platinum</option>
-        </select>
-      </div>`;
-  }
+
+  
   return fields;
 }
+
 
 // On Modal Open, Generate Forms for Each Bag Item
 document.getElementById('orderModal').addEventListener('show.bs.modal', function () {
