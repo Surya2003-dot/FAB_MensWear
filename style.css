@@ -234,7 +234,7 @@
     justify-content: center;
 }
       .popular .product-card img{
-            width: 350px;
+            width: 320px;
             height: 350px;
       }
 }
@@ -422,8 +422,8 @@
     justify-content: center;
 }
       .accessories .product-card img{
-            width: 350px;
-            height: 350px;
+            width: 320px;
+            height: 340px;
       }
 }
 
